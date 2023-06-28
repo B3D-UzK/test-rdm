@@ -1,0 +1,127 @@
+## **Sharing Foundations**
+
+### Benefits of Sharing
+
+-   Benefits of data sharing:
+
+    1.  Reinforces open scientific inquiry
+
+    2.  Supports verification and replication of original results
+
+    3.  Promotes new research and testing of alternative methods
+
+    4.  Encourages collaboration and multiple perspectives
+
+    5.  Provides important teaching resources
+
+    6.  Reduces costs by avoiding duplicate data collection efforts
+
+    7.  Protects against faulty or fraudulent data
+
+    8.  Enhances visibility and overall impact of research projects
+
+    9.  Preserves data for future use
+
+    10. Helps the broader community and individual researchers do better research
+
+-   Key players in data sharing are the data creator/producer, secondary data user, and data repository
+
+-   Data repository plays a key role in enhancing discovery and reuse of data and creating formal data citation
+
+-   Sharing data is encouraged by funders and required in some cases
+
+-   Data sharing benefits both the broader research community and individual researchers.
+
+### Challenges to Sharing
+
+Challenges to data sharing:
+
+-   Making data shareable takes time and effort
+
+-   Perceived risks from loss of control of the data
+
+-   Data contained confidential or sensitive information
+
+-   Ownership of the data may be unclear or problematic
+
+-   Lack of incentives for sharing data
+
+Additional challenge: lack of experience and knowledge of data management
+
+Researchers and information professionals can overcome these challenges by applying data management practices.
+
+### Data Citations
+
+-   Lack of career incentives is an obstacle to sharing data.
+
+-   Data citation provides a standardized method for citing data, and can be used to reward researchers for sharing their data.
+
+-   The Joint Declaration of Data Citation Principles establishes principles for data citation, including credit and attribution, evidence, unique identification, access, persistence, specificity and verifiability, and interoperability and flexibility.
+
+-   DataCite is a group that works with data repositories to assign persistent identifiers such as DOIs to data, supporting simple and effective methods of data citation, discovery, and access.
+
+-   Proper citation of datasets supports reproducibility of research, ensures proper credit for researchers, and enables tracking of data reuse.
+
+-   Researchers should consider whether the repository they choose supports the creation of unique data citations that embody the Joint Declaration of Data Citation Principles.
+
+## **Enabling Sharing**
+
+### Protecting Confidentiality
+
+-   Researchers have an ethical obligation to protect the privacy of study participants when collecting data that deals with human subjects.
+
+-   Confidentiality breaches can have serious consequences, including negative impacts on a researcher\'s career and institution, as well as legal sanctions.
+
+-   Protecting confidentiality requires careful consideration and special handling of not only direct identifiers, but also indirect identifiers.
+
+-   Anonymizing qualitative data is best done using a pre-planned anonymization scheme that modifies the qualitative dataset to protect respondent confidentiality.
+
+-   There are other strategies currently being developed to protect confidential data, but the most common strategy remains to anonymize data by removing variables, applying statistical techniques, or redacting information to lessen the potential for identifying an individual.
+
+-   Researchers should consider future research questions and carefully consider a variable\'s analytic importance to determine the best strategy for anonymizing data to maximize usability, and may consult their institutional review board, statistical experts, or information professionals.
+
+### Intellectual Property and Data Ownership
+
+-   Data ownership and intellectual property rights can complicate sharing research data.
+
+-   Intellectual property rights apply to any work created or invented with intellectual effort.
+
+-   Different forms of research data can have different intellectual property rights and legal jurisdictions.
+
+-   Researchers should resolve any data ownership issues before sharing data.
+
+-   Data ownership can be complicated due to multiple stakeholders and collaborations.
+
+-   Researchers should come to an agreement on data usage and ownership at the beginning of a project.
+
+-   Institutional policies and funder policies can influence data ownership and sharing.
+
+-   Researchers may need permission from data producers to share proprietary data.
+
+-   Information and legal professionals can assist researchers in determining policies that affect data ownership.
+
+### Access
+
+-   Sharing research data has benefits and challenges.
+
+-   Access to data may vary based on external limitations or researchers\' needs.
+
+-   Data ownership issues or data containing sensitive or confidential information may affect how and where a researcher provides access.
+
+-   Three types of restrictions that are commonly placed on data: embargos, technological access restrictions, and data use agreements.
+
+-   Embargos are a specified period of time when access to data will be restricted.
+
+-   Technological access restrictions may require users to log in to a particular system and authenticate the relationship to an institution to access certain data.
+
+-   Data use agreements explicitly outline an agreement between the data producer and secondary data user.
+
+-   Ideally, researchers should make data as open as possible, but this may not always be feasible.
+
+-   Applying a standard Creative Commons license can positively impact the potential for reuse.
+
+-   Creative Commons provides a robust legal code, a human-readable summary, and a machine-readable layer of code that can help make resources interoperable across systems.
+
+-   Five main Creative Commons license categories: Attribution, NonCommercial, No Derivative Works, ShareAlike, and CC0.
+
+-   Researchers should explain restrictions within the terms of use and apply a standard license to enable informed reuse.

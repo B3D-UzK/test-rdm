@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>RDM in Astro – dataownership</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">RDM in Astro</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">
+ <span class="menu-text">RDM_in_Astro</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-research-project" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Research Project</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-research-project">    
+        <li>
+    <a class="dropdown-item" href="./DataPolicies.html">
+ <span class="dropdown-text">Data Policies</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./DataManagement.html">
+ <span class="dropdown-text">Data Management</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ELabNotebook.html">
+ <span class="dropdown-text">E-Lab Notebook</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Stakeholders.html">
+ <span class="dropdown-text">Stakeholders</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./FundingAgencies.html">
+ <span class="dropdown-text">Funding Agencies</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./DataOwnership.html">
+ <span class="dropdown-text">Data Ownership</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Networking.html">
+ <span class="dropdown-text">Networking</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-research" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Research</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-research">    
+        <li>
+    <a class="dropdown-item" href="./BestPractiesRDM.html">
+ <span class="dropdown-text">Best Practies in RDM</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./SharingData.html">
+ <span class="dropdown-text">Sharing Data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Archiving.html">
+ <span class="dropdown-text">Archiving</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Training.html">
+ <span class="dropdown-text">Training</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#ownership-of-rightsrights-of-use" id="toc-ownership-of-rightsrights-of-use" class="nav-link active" data-scroll-target="#ownership-of-rightsrights-of-use">Ownership of rights/rights of use</a></li>
+  <li><a href="#data-protection" id="toc-data-protection" class="nav-link" data-scroll-target="#data-protection">Data protection</a></li>
+  <li><a href="#transfer-of-rights" id="toc-transfer-of-rights" class="nav-link" data-scroll-target="#transfer-of-rights">Transfer of rights</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="ownership-of-rightsrights-of-use" class="level2">
+<h2 class="anchored" data-anchor-id="ownership-of-rightsrights-of-use">Ownership of rights/rights of use</h2>
+<p>It is important to clarify the ownership of rights in research collaborations, as it can<br>
+affect the ability of researchers to access and use the data generated by their research.<br>
+In general, the ownership of rights is determined by the employment contract or specific<br>
+association of the researchers involved in the collaboration. It may be necessary to consult with the responsible department or legal department to ensure that the regulations<br>
+governing the ownership of rights are properly understood and followed. In addition, the<br>
+regulations for researchers without an employment contract should also be considered.<br>
+Legal regulations, such as the freedom of science guaranteed in the Basic Law, must also<br>
+be taken into account when determining the ownership of rights in research collaborations.</p>
+<p><br>
+The ownership of rights is determined by the employment contract or specific association. In general, the regulations governing the ownership of rights should be clarified<br>
+with the responsible department or legal department, and the regulations for researchers<br>
+without an employment contract should also be identified. Legal regulations, including<br>
+the freedom of science guaranteed in the Basic Law (Article 5, paragraph 3), should be<br>
+taken into account. The specific details of the ownership of rights in a research collaboration will depend on the individual circumstances of the collaboration and the agreements<br>
+made between the involved parties. It is important to clarify and agree on these details<br>
+before the collaboration begins.</p>
+<p><br>
+The ownership of rights to research data is determined by the employment contract or<br>
+specific association of the researchers involved in the project. It is important to clarify the<br>
+ownership of rights with the responsible department or legal department and to ensure<br>
+that the regulations for researchers without an employment contract are also addressed.<br>
+Legal regulations, particularly the freedom of science guaranteed in the Basic Law (Art. 5 para. 3), must be observed in all cases.</p>
+<p>Authorship, patent rights, trademark law, and personal rights are typically regulated<br>
+in the employment contracts or agreements between the researchers and their respective<br>
+institutions. These contracts or agreements will outline the ownership and rights of use<br>
+for any intellectual property created or developed by the researchers during the course<br>
+of their work. In the case of funding contracts, the ownership and rights of use may be<br>
+outlined in the agreement between the funding party and the researcher or institution. It<br>
+is important for all parties involved to carefully review and understand the terms of these<br>
+agreements in order to ensure that ownership and rights of use are properly defined and<br>
+protected.</p>
+<p><br>
+The ownership of non-protectable data may be regulated by the employment contracts<br>
+or agreements between the researchers and the university, or by other agreements (funding<br>
+contracts). It is important to clarify the ownership of non-protectable data with the<br>
+responsible department or legal department in order to ensure that all parties involved<br>
+are aware of their rights and obligations.</p>
+<p><br>
+Ownership of data and its usage rights are regulated by employment contracts and<br>
+other agreements between researchers and their institutions, but it is not clear if personally<br>
+marking data is part of those agreements. It is also not specified if data is to be marked<br>
+for personal identification purposes or for other reasons.</p>
+</section>
+<section id="data-protection" class="level2">
+<h2 class="anchored" data-anchor-id="data-protection">Data protection</h2>
+<p><br>
+Compliance with legal/ethical aspects, including data protection, is ensured by adhering to relevant laws and regulations, as well as by following established guidelines and<br>
+protocols for handling sensitive and personal data. This may involve obtaining informed<br>
+consent from individuals, anonymizing data, and implementing appropriate security measures to protect data from unauthorized access or use. Additionally, institutions involved<br>
+in the research may have their own policies and procedures in place to ensure compliance<br>
+with legal/ethical requirements.</p>
+</section>
+<section id="transfer-of-rights" class="level2">
+<h2 class="anchored" data-anchor-id="transfer-of-rights">Transfer of rights</h2>
+<p><br>
+By regulating the transfer of rights, it can be ensured that data is freely available when<br>
+rights are transferred to third parties, e.g.&nbsp;to publishers</p>
+<p><br>
+- In the case of a transfer of rights of re-use or publication, care should be taken to<br>
+ensure that the data remain freely available for scientific purposes.</p>
+<p><br>
+- All rights to data, in particular the right to further use or publish the data, should<br>
+be reserved for the Principal Investigators (PI) and should not be outsourced to third<br>
+parties.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

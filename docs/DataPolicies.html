@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>RDM in Astro – datapolicies</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">RDM in Astro</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">
+ <span class="menu-text">RDM_in_Astro</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-research-project" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Research Project</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-research-project">    
+        <li>
+    <a class="dropdown-item" href="./DataPolicies.html">
+ <span class="dropdown-text">Data Policies</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./DataManagement.html">
+ <span class="dropdown-text">Data Management</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ELabNotebook.html">
+ <span class="dropdown-text">E-Lab Notebook</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Stakeholders.html">
+ <span class="dropdown-text">Stakeholders</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./FundingAgencies.html">
+ <span class="dropdown-text">Funding Agencies</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./DataOwnership.html">
+ <span class="dropdown-text">Data Ownership</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Networking.html">
+ <span class="dropdown-text">Networking</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-research" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Research</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-research">    
+        <li>
+    <a class="dropdown-item" href="./BestPractiesRDM.html">
+ <span class="dropdown-text">Best Practies in RDM</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./SharingData.html">
+ <span class="dropdown-text">Sharing Data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Archiving.html">
+ <span class="dropdown-text">Archiving</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Training.html">
+ <span class="dropdown-text">Training</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#data-policies-in-astrophysics" id="toc-data-policies-in-astrophysics" class="nav-link active" data-scroll-target="#data-policies-in-astrophysics">Data Policies in Astrophysics</a>
+  <ul class="collapse">
+  <li><a href="#content-of-the-data-policies" id="toc-content-of-the-data-policies" class="nav-link" data-scroll-target="#content-of-the-data-policies">Content of the Data policies</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="data-policies-in-astrophysics" class="level1">
+<h1>Data Policies in Astrophysics</h1>
+<p>Data policies in astrophysics have been developed to ensure the responsible management, sharing, and utilization of astronomical data. These policies establish guidelines and practices that govern various aspects of data handling, including collection, storage, access, and dissemination. They play a crucial role in promoting transparency, collaboration, and the advancement of scientific research in the field of astrophysics.</p>
+<p>The formulation of these policies is based on a comprehensive evaluation of existing German research data (RD) policies, a comparison with international recommendations for RD policy development, as well as expert interviews conducted with German universities and a technical college. This process has allowed for the subdivision of key questions and text modules according to the RD policy scheme.</p>
+<p>The key questions posed during the policy development process draw insights from the evaluation of German RD policies, ensuring alignment with best practices. Additionally, international recommendations for RD policy creation have been taken into account to ensure the policies are robust and globally relevant. Expert interviews with German experts from universities have provided valuable input and perspectives.</p>
+<p>By incorporating these key questions and text modules into the data policies, the astrophysics community can establish a comprehensive and effective framework for managing research data. This will facilitate data transparency, collaboration, and adherence to best practices, ultimately driving advancements in the field of astrophysics.</p>
+<section id="content-of-the-data-policies" class="level2">
+<h2 class="anchored" data-anchor-id="content-of-the-data-policies">Content of the Data policies</h2>
+<p><span class="citation" data-cites="article">@article</span>{hiemenz2018empfehlungen, title={Empfehlungen zur Erstellung institutioneller Forschungsdaten-Policies. Das Forschungsdaten-Policy-Kit als generischer Baukasten mit Leitfragen und Textbausteinen f{“u}r Hochschulen in Deutschland}, author={Hiemenz, Bea and Kuberek, Monika}, year={2018} }</p>
+<p><strong>1 Preamble</strong></p>
+<ul>
+<li><p>1.1 Aim of the institution, importance of the RDM</p></li>
+<li><p>1.2 Standards and principles relating to RDM</p></li>
+</ul>
+<p><strong>2 Scope</strong></p>
+<ul>
+<li><p>2.1 Range</p></li>
+<li><p>2.2 Relationship to legal requirements/ contracts with third parties</p></li>
+</ul>
+<p><strong>3 Legal/Ethical Aspects</strong></p>
+<ul>
+<li><p>3.1 Ownership of rights/rights of use</p></li>
+<li><p>3.2 Data protection</p></li>
+<li><p>3.3 Transfer of rights</p></li>
+</ul>
+<p><strong>4 Handling Of Research Data</strong></p>
+<ul>
+<li><p>4.1 Basic principles</p></li>
+<li><p>4.2 Data selection</p></li>
+<li><p>4.3 Access/Licensing</p></li>
+<li><p>4.4 Storage time/storage duration</p></li>
+</ul>
+<p><strong>5 Responsibilities - Researchers</strong></p>
+<ul>
+<li><p>5.1 Researchers</p></li>
+<li><p>5.2 Principles RDM</p></li>
+<li><p>5.3 Data Management Plan (DMP)</p></li>
+<li><p>5.4 Project Regulations</p></li>
+</ul>
+<p><strong>6 Responsibilities - Institution</strong></p>
+<ul>
+<li><p>6.1 Infrastructure</p></li>
+<li><p>6.2 Consulting/Education/Training</p></li>
+<li><p>6.3 Cooperation</p></li>
+</ul>
+<p><strong>7 Validity</strong></p>
+<ul>
+<li><p>7.1 Validity/Review</p></li>
+<li><p>7.2 Contact</p></li>
+</ul>
+<p><strong>8 Annex/Glossary (definitions, references)</strong></p>
+<ul>
+<li><p>8.1 Definitions</p></li>
+<li><p>8.2 Reference to related documents</p></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
